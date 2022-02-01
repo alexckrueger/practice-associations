@@ -1,0 +1,14 @@
+@api_key = Rails.application.credentials.holidays_api_key
+
+###
+
+GET https://calendarific.com/api/v2/holidays?api_key=(api_key
+)&country=US&year=2022&type=national
+
+###
+
+GET http://localhost:3000/meetings
+
+###
+
+GET http://localhost:3000/meetings/holidays
