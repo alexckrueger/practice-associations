@@ -2,13 +2,40 @@
 
 ###
 
-GET https://calendarific.com/api/v2/holidays?api_key=(api_key
-)&country=US&year=2022&type=national
+GET https://calendarific.com/api/v2/holidays?country=US&year=2022&type=national
+Authorization: Bearer {{ api_key }}
 
-###
+### show meetings
 
 GET http://localhost:3000/meetings
 
 ###
 
 GET http://localhost:3000/meetings/holidays
+
+### Create meeting
+
+POST http://localhost:3000/meetings
+Content-Type: application/json
+
+{
+  "title": "to be destroyed",
+  "location": "The hallway",
+  "date": "2022-05-29T05:00:00.000Z"
+}
+
+### Show Meeting
+
+GET http://localhost:3000/meetings/1
+
+### Update Meeting
+PATCH http://localhost:3000/meetings/3
+Content-Type: application/json
+
+{
+  "location": "School"
+}
+
+### OBLITERATE
+
+DELETE http://localhost:3000/meetings/4
